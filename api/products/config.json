@@ -1,0 +1,32 @@
+{
+    "name": "products",
+    "description": "products api for catalog",
+    "routes": {
+        "GET /products": "getProductsList",
+        "POST /products": "newProduct",
+        "GET /products/:id": "getProduct",
+        "PATCH /products/:id": "editProduct",
+        "DELETE /products/:id": "removeProduct"
+    },
+    "model": {
+        "title": {
+            "type": "text",
+            "required": true
+        },
+        "description": {
+            "type": "text",
+            "required": true
+        },
+        "img": {
+            "type": "file",
+            "required": true
+        },
+        "gallery": {
+            "type": "files"
+        },
+        "published": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

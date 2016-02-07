@@ -1,0 +1,7 @@
+{
+    "name": "files",
+    "description": "upload files",
+    "routes": {
+        "POST /files": "newFile"
+    }
+}
