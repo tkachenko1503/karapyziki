@@ -1,20 +1,13 @@
 import React from "react";
 import { bind } from "decko";
 import { Link } from "react-router";
+import Reflux from "reflux";
 
 import postActions from "../actions/postActions";
 import postStore from "../stores/postStore";
+import { connectToStore } from "../utils";
 
-export default class PostList extends React.Component {
-	// @bind
-	// handleRoute(e) {
-	// 	this.currentUrl = e.url;
-	// }
-
-	componentDidMount () {
-		postActions.test();
-	}
-
+class PostList extends React.Component {
 	render () {
 		return (
 			<div>
@@ -29,3 +22,5 @@ export default class PostList extends React.Component {
 		);
 	}
 }
+
+export default connectToStore(PostList, postStore);

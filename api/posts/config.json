@@ -1,0 +1,28 @@
+{
+    "name": "posts",
+    "description": "posts api for karapyziki.org",
+    "routes": {
+        "GET /posts": "getPostsList",
+        "POST /posts": "newPost",
+        "GET /posts/:id": "getPost",
+        "PATCH /posts/:id": "editPost",
+        "DELETE /posts/:id": "removePost"
+    },
+    "model": {
+        "title": {
+            "type": "text",
+            "required": true
+        },
+        "content": {
+            "type": "text",
+            "required": true
+        },
+        "picture": {
+            "type": "file",
+            "required": true
+        },
+        "showDate": {
+            "type": "files"
+        }
+    }
+}

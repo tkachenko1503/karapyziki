@@ -32,7 +32,7 @@ module.exports = {
 			{test: /\.json$/, loaders: ["json"]}
 		],
 		postLoaders: [
-			{test: /\.js$/, loaders: ["babel?presets[]=es2015&presets[]=stage-0&presets[]=react"], exclude: /node_modules/}
+			{test: /\.js$/, loaders: ["babel"], exclude: /node_modules/}
 		],
 		noParse: /\.min\.js/
 	},
