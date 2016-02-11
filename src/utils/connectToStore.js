@@ -2,8 +2,12 @@ import React from "react";
 
 export const connectToStore = (Component, store) => {
     return React.createClass({
+        contextTypes: {
+            pageData: React.PropTypes.object
+        },
+
         getInitialState () {
-            return store.getInitialState() || null;
+            return store.getInitialState(this.props, this.state, this.context) || null;
         },
 
         componentDidMount () {

@@ -35,7 +35,10 @@ module.exports = {
 			"node_modules",
 			"web_modules"
 		],
-		extensions: ["", ".json", ".js"]
+		extensions: ["", ".json", ".js"],
+		alias: {
+			parseX: path.join(__dirname, "../node_modules/parse/index.js")
+		}
 	},
 	node: {
 		__dirname: true,

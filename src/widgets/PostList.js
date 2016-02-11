@@ -5,7 +5,7 @@ import Reflux from "reflux";
 
 import postActions from "../actions/postActions";
 import postStore from "../stores/postStore";
-import { connectToStore } from "../utils";
+import { connectToStore } from "../utils/connectToStore";
 
 class PostList extends React.Component {
 	render () {
@@ -17,6 +17,12 @@ class PostList extends React.Component {
 				<main>
                     Aloha! My frend WOW
 					<Link to="/posts">Test</Link>
+
+					<ul>
+						{this.props.posts.map( (p, i) => {
+							return <li key={i}>{ p.title }</li>;
+						})}
+					</ul>
                 </main>
 			</div>
 		);
